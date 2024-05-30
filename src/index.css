@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-image: url("./assets/background.png");
+  background-size: cover;
+}
+
+/* styles.css or equivalent */
+.candy {
+  transition: transform 0.2s;
+}
+
+.candy.match {
+  animation: match-glow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes match-glow {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #ff0;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff0, 0 0 40px #ff0;
+  }
+}
+
+.highlighted {
+  border: 2px solid yellow;
+  animation: highlight 1s infinite alternate;
+}
+
+@keyframes highlight {
+  from {
+    box-shadow: 0 0 10px yellow;
+  }
+  to {
+    box-shadow: 0 0 20px yellow;
+  }
+}
