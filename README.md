@@ -28,6 +28,8 @@ Check out the screenshots and video demo of the game in action!
 
 ### Video
 
+[![Video Demo](https://img.youtube.com/vi/cp04UAQaD-E.jpg)](https://youtu.be/cp04UAQaD-E)
+
 [Watch the demo video](https://youtu.be/cp04UAQaD-E)
 
 ### Screenshots along with 🗺️ Guided Tour
