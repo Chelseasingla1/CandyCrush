@@ -44,7 +44,6 @@ Check out the screenshots and video demo of the game in action!
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/03cdc5b9-70d3-45ab-a894-c4d1151da07a)
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/3847ea7e-ca0e-4705-8a35-f496bcfd115b)
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/c9a8c594-5702-433c-8bf3-932ea7a8f6c2)
-![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/8fb2f167-df37-4bba-9c60-8c9aa9a77a1c)
 
 ## ⚙️ Installation
 
