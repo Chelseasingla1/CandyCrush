@@ -64,8 +64,8 @@ npm install
 Shepherd.js is used to create a guided tour for the application. To install Shepherd.js and its React wrapper, run the following commands:
 
 ```bash
-npm install shepherd.js
-npm install react-shepherd
+yarn add shepherd.js
+yarn add react-shepherd
 ```
 
 Additionally, you need to include the Shepherd.js CSS file in your project. You can do this by importing it in your main CSS file or in the relevant React component:
@@ -104,7 +104,7 @@ The project relies on several key dependencies:
 To install these dependencies, run:
 
 ```bash
-npm install react redux react-redux shepherd.js react-shepherd react-icons @octokit/rest
+yarn add react redux react-redux shepherd.js react-shepherd react-icons @octokit/rest
 ```
 
 ## 📂 Folder Structure
