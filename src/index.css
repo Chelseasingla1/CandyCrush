@@ -29,6 +29,10 @@ body{
   border: 2px solid yellow;
   animation: highlight 1s infinite alternate;
 }
+.highlighted-three {
+  border: 2px solid rgb(180, 252, 125);
+  animation: highlight 1s infinite alternate;
+}
 
 @keyframes highlight {
   from {
@@ -38,3 +42,193 @@ body{
     box-shadow: 0 0 20px yellow;
   }
 }
+
+
+/* src/styles.css */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: popup-animation 0.5s ease-in-out;
+}
+
+.popup-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@keyframes popup-animation {
+  0% { transform: translate(-50%, -60%); opacity: 0; }
+  100% { transform: translate(-50%, -50%); opacity: 1; }
+}
+
+
+/* styles.css */
+.shepherd-element {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.shepherd-button {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.shepherd-button:hover {
+  background-color: #e68900;
+}
+
+.shepherd-button-secondary {
+  background-color: #607d8b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.shepherd-button-secondary:hover {
+  background-color: #546e7a;
+}
+
+.shepherd-header {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.shepherd-text {
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Global styles for dark theme buttons */
+.button.dark {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s, transform 0.1s;
+}
+
+/* Hover state */
+.button.dark:hover {
+  background-color: #444;
+  border-color: #555;
+}
+
+/* Active state */
+.button.dark:active {
+  background-color: #555;
+  border-color: #666;
+  transform: scale(0.98);
+}
+
+/* Specific styles for the score button */
+.score-button {
+  font-weight: bold;
+}
+
+/* Specific styles for the start tour button */
+.start-tour-button {
+  margin-right: 10px; /* Add some spacing between the buttons */
+}
+
+/* Specific styles for the show move button */
+.show-move-button {
+  margin-left: 10px; /* Add some spacing between the buttons */
+}
+
+/* Custom styles for the Shepherd tour */
+.shepherd-theme-arrows .shepherd-button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.shepherd-theme-arrows .shepherd-button:hover {
+  background-color: #444;
+  border-color: #555;
+}
+
+.shepherd-theme-arrows .shepherd-button:active {
+  background-color: #555;
+  border-color: #666;
+}
+
+.shepherd-theme-arrows .shepherd-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.shepherd-theme-arrows .shepherd-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.lives-container {
+  position: relative; /* Establish a reference point for positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px; /* Adjust this value as needed */
+}
+
+.lives-button {
+  position: absolute; /* Position it absolutely within the parent container */
+  top: -370px; /* Adjust this value to move it up */
+  left: -200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lives-button:hover {
+  background-color: #e0e0e0;
+}
+
+.lives span {
+  font-size: 2em;
+  margin: 0 5px;
+  transition: transform 0.3s ease;
+}
+
+.lives span:hover {
+  transform: scale(1.2);
+}
+

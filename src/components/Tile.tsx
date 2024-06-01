@@ -13,7 +13,7 @@ const Tile: React.FC<TileProps> = ({ candy, candyId, isHighlighted }) => {
 
   return (
     <div
-      className={`h-24 w-24 flex justify-center items-center m-0.5 rounded-lg select-none ${isHighlighted ? 'highlighted' : ''}`}
+      className={`h-24 w-24 flex justify-center items-center m-0.5 rounded-lg select-none ${isHighlighted ? 'highlighted' : ''} ${isHighlighted ? 'highlighted-three' : ''}`}
       style={{
         boxShadow: "inset 5px 5px 15px #062525, inset -5px -5px 15px #aaaab7bb",
       }}
