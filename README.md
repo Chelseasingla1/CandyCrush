@@ -59,6 +59,20 @@ git clone https://github.com/yourusername/candy-crush-clone.git
 cd candy-crush-clone
 npm install
 ```
+### Installing Shepherd.js
+
+Shepherd.js is used to create a guided tour for the application. To install Shepherd.js and its React wrapper, run the following commands:
+
+```bash
+npm install shepherd.js
+npm install react-shepherd
+```
+
+Additionally, you need to include the Shepherd.js CSS file in your project. You can do this by importing it in your main CSS file or in the relevant React component:
+
+```javascript
+import 'shepherd.js/dist/css/shepherd.css';
+```
 
 ## 🚀 Usage
 
