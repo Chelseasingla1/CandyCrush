@@ -5,8 +5,11 @@ Welcome to the Candy Crush Clone with Shepherd.js project! This project is a clo
 ## Table of Contents
 
 - [✨ Features](#features)
+- [🗺️ Guided Tour](#guided-tour)
+- [📸 Demo](#demo)
 - [⚙️ Installation](#installation)
 - [🚀 Usage](#usage)
+- [📦 Dependencies](#dependencies)
 - [📂 Folder Structure](#folder-structure)
 - [🧩 Components](#components)
 - [📊 State Management](#state-management)
@@ -21,6 +24,27 @@ Welcome to the Candy Crush Clone with Shepherd.js project! This project is a clo
 - **State Management:** Using Redux for state management.
 - **Responsive Design:** Ensures a great user experience on both desktop and mobile devices.
 - **Lives System:** Players have a limited number of lives, adding an extra layer of challenge.
+
+## 📸 Demo
+
+Check out the screenshots and video demo of the game in action!
+
+### Video
+
+[Watch the demo video](https://youtu.be/cp04UAQaD-E)
+
+### Screenshots
+
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/8340feb4-9190-4a8d-81c8-0bc2cf90eb75)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/e95dab9f-6079-4064-86ce-46e3884d9c73)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/17ade3c7-3c2b-4f59-a961-4c2bd1642ca0)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/b41904c5-0a3c-4b00-a3e3-b7febb4ce3c7)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/82682bfd-860e-4ffc-ad40-3f8bd90e3c20)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/c7e56d9a-cfd8-41a2-99a0-d89c12406fd8)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/03cdc5b9-70d3-45ab-a894-c4d1151da07a)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/3847ea7e-ca0e-4705-8a35-f496bcfd115b)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/c9a8c594-5702-433c-8bf3-932ea7a8f6c2)
+![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/8fb2f167-df37-4bba-9c60-8c9aa9a77a1c)
 
 ## ⚙️ Installation
 
@@ -46,6 +70,23 @@ To build the project for production:
 
 ```bash
 npm run build
+```
+## 📦 Dependencies
+
+The project relies on several key dependencies:
+
+- **React:** A JavaScript library for building user interfaces.
+- **Redux:** A state management library.
+- **React-Redux:** Official React bindings for Redux.
+- **Shepherd.js:** A JavaScript library for creating guided tours.
+- **react-shepherd:** React wrapper for Shepherd.js.
+- **React Icons:** Icons for React projects.
+- **Octokit:** GitHub REST API client.
+
+To install these dependencies, run:
+
+```bash
+npm install react redux react-redux shepherd.js react-shepherd react-icons @octokit/rest
 ```
 
 ## 📂 Folder Structure
@@ -120,10 +161,5 @@ To start the tour, click the "Start Tour" button on the main screen.
 
 Contributions are welcome! Please fork the repository and submit pull requests.
 
-## 📜 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 Feel free to reach out if you have any questions or need further assistance. Happy coding! 🍀
