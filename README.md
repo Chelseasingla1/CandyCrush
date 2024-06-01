@@ -5,7 +5,6 @@ Welcome to the Candy Crush Clone with Shepherd.js project! This project is a clo
 ## Table of Contents
 
 - [✨ Features](#features)
-- [🗺️ Guided Tour](#guided-tour)
 - [📸 Demo](#demo)
 - [⚙️ Installation](#installation)
 - [🚀 Usage](#usage)
@@ -13,9 +12,7 @@ Welcome to the Candy Crush Clone with Shepherd.js project! This project is a clo
 - [📂 Folder Structure](#folder-structure)
 - [🧩 Components](#components)
 - [📊 State Management](#state-management)
-- [🗺️ Guided Tour](#guided-tour)
 - [🤝 Contributing](#contributing)
-- [📜 License](#license)
 
 ## ✨ Features
 
@@ -33,17 +30,24 @@ Check out the screenshots and video demo of the game in action!
 
 [Watch the demo video](https://youtu.be/cp04UAQaD-E)
 
-### Screenshots
+### Screenshots along with 🗺️ Guided Tour
+
+The guided tour is implemented using Shepherd.js. The tour helps new users understand the game's features and how to play. Key steps in the tour include:
 
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/8340feb4-9190-4a8d-81c8-0bc2cf90eb75)
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/e95dab9f-6079-4064-86ce-46e3884d9c73)
+1. **👋 Welcome:** Introduction to the game.
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/17ade3c7-3c2b-4f59-a961-4c2bd1642ca0)
+2. **🍬 Four Candies Match:** Highlights a spot where four candies matched.
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/b41904c5-0a3c-4b00-a3e3-b7febb4ce3c7)
+3. **🍭 Three Candies Match:** Highlights a spot where three candies matched.
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/82682bfd-860e-4ffc-ad40-3f8bd90e3c20)
+4. **🏆 Scoreboard:** Shows the player's score.
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/c7e56d9a-cfd8-41a2-99a0-d89c12406fd8)
+5. **❓ Help Button:** Explains the help feature.
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/03cdc5b9-70d3-45ab-a894-c4d1151da07a)
+6. **❤️ Lives Remaining:** Displays the remaining lives.
 ![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/3847ea7e-ca0e-4705-8a35-f496bcfd115b)
-![image](https://github.com/Chelseasingla1/CandyCrush/assets/129886894/c9a8c594-5702-433c-8bf3-932ea7a8f6c2)
 
 ## ⚙️ Installation
 
@@ -140,17 +144,6 @@ The project uses Redux for state management. The main actions and reducers are l
 - `moveBelow`: Moves candies down after matches.
 - `updateScore`: Updates the player's score.
 - `resetScore`: Resets the score.
-
-## 🗺️ Guided Tour
-
-The guided tour is implemented using Shepherd.js. The tour helps new users understand the game's features and how to play. Key steps in the tour include:
-
-1. **👋 Welcome:** Introduction to the game.
-2. **🍬 Four Candies Match:** Highlights a spot where four candies matched.
-3. **🍭 Three Candies Match:** Highlights a spot where three candies matched.
-4. **🏆 Scoreboard:** Shows the player's score.
-5. **❓ Help Button:** Explains the help feature.
-6. **❤️ Lives Remaining:** Displays the remaining lives.
 
 ### Starting the Tour
 
