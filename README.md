@@ -28,7 +28,7 @@ Check out the screenshots and video demo of the game in action!
 
 ### Video
 
-[![Video Demo](https://img.youtube.com/vi/cp04UAQaD-E.jpg)](https://youtu.be/cp04UAQaD-E)
+[![Video Demo](https://img.youtube.com/vi/cp04UAQaD-E/0.jpg)](https://youtu.be/cp04UAQaD-E)
 
 [Watch the demo video](https://youtu.be/cp04UAQaD-E)
 
@@ -58,7 +58,7 @@ To get started with the project, clone the repository and install the necessary 
 
 ```bash
 git clone https://github.com/yourusername/candy-crush-clone.git
-cd candy-crush-clone
+cd CandyCrush
 npm install
 ```
 ### Installing Shepherd.js
