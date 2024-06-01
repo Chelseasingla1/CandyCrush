@@ -22,6 +22,7 @@ const tourOptions = {
   useModalOverlay: true,
 };
 
+
 class ShowImage {
   DisplayImage() {
     var myloc = new Image();
@@ -47,119 +48,156 @@ window.onload = function() {
   };
   document.body.appendChild(button);
 };
-const tour = new Shepherd.Tour(tourOptions);
+// const tour = new Shepherd.Tour(tourOptions);
+
+const tour = new Shepherd.Tour({
+  defaultStepOptions: {
+    classes: 'shepherd-theme-arrows',
+    scrollTo: true
+  }
+});
+
 
 tour.addStep({
   id: 'welcome',
-  text: 'Welcome to the tour!',
+  title:'👋 Welcome!',
+  text: 'Welcome to the tour! Lets get started!',
   attachTo: {
     element: '.start-tour-button',
     on: 'bottom'
   },
   buttons: [
+    // {
+    //   text: 'Back',
+    //   action() {
+    //     return tour.back();
+    //   },
+    //   classes: 'shepherd-button',
+    // },
     {
-      text: 'Back',
-      action() {
-        return tour.back();
-      },
-      classes: 'shepherd-button',
-    },
-    {
-      text: 'Next',
-      action() {
-        return tour.next();
-      },
+      text: 'Next ➡️',
+      action:tour.next,
       classes: 'shepherd-button',
     },
   ],
-  classes: 'shepherd-header',
 });
 tour.addStep({
   id: 'Four',
-  text: 'Four candies burst!',
+  title:'🍬 Sweet Success!',
+  text: 'Four candies matched! Watch this spot closely.',
   attachTo: {
     element: '.highlighted',
     on: 'right'
   },
   buttons: [
     {
-      text: 'Back',
-      action() {
-        return tour.back();
-      },
+      text: '⬅️ Back',
+      action:tour.back,
       classes: 'shepherd-button',
     },
     {
-      text: 'Next',
-      action() {
-        return tour.next();
-      },
+      text: 'Next ➡️',
+      action:tour.next,
       classes: 'shepherd-button',
     },
   ],
-  classes: 'shepherd-header',
 
 });
 tour.addStep({
   id: 'Three',
-  text: 'Three candies burst!',
+  title:'🍭 Triple Treat!',
+  text: 'Three candies matched! Pay attention here.',
   attachTo: {
     element: '.highlighted-three',
     on: 'left'
   },
   buttons: [
     {
-      text: 'Back',
-      action() {
-        return tour.back();
-      },
+      text: '⬅️ Back',
+      action: tour.back,
       classes: 'shepherd-button',
     },
     {
-      text: 'Next',
-      action() {
-        return tour.next();
-      },
+      text: 'Next ➡️',
+      action: tour.next,
       classes: 'shepherd-button',
     },
   ],
-  classes: 'shepherd-header',
 });
 tour.addStep({
   id: 'Score',
-  text: 'here you can see your score!',
+  title: '🏆 Scoreboard',
+  text: 'Here you can see your score! Keep it high.',
   attachTo: {
     element: '.score-button',
     on: 'bottom'
   },
   buttons: [
     {
-      text: 'Back',
-      action() {
-        return tour.back();
-      },
+      text: '⬅️ Back',
+      action: tour.back,
       classes: 'shepherd-button',
     },
     {
-      text: 'Next',
-      action() {
-        return tour.next();
-      },
+      text: 'Next ➡️',
+      action:tour.next,
       classes: 'shepherd-button',
     },
   ],
-  classes: 'shepherd-header',
+});
+tour.addStep({
+  id: 'Take-Help',
+  title: '❓ Need a hand?',
+  text: "Click here if you're confused! 🆘 You can take help from here if you're stuck, but remember, you can only use it three times! 💡",
+  attachTo: {
+    element: '.show-move-button',
+    on: 'bottom'
+  },
+  buttons: [
+    {
+      text: '⬅️ Back',
+      action: tour.back,
+      classes: 'shepherd-button',
+    },
+    {
+      text: 'Next ➡️',
+      action:tour.next,
+      classes: 'shepherd-button',
+    },
+  ],
+});
+tour.addStep({
+  id: 'Lives',
+  title: '❤️ Lives Remaining',
+  text: "Be careful! These are your remaining lives. Use them wisely!",
+  attachTo: {
+    element: '.livesnew-button',
+    on: 'right'
+  },
+  buttons: [
+    {
+      text: '⬅️ Back',
+      action: tour.back,
+      classes: 'shepherd-button',
+    },
+    {
+      text: 'Next ➡️',
+      action:tour.next,
+      classes: 'shepherd-button',
+    },
+  ],
 });
 tour.addStep({
   id: 'HowToBurstFour',
-  text: 'Here is how to burst four candies!',
+  title:'💡 Candy Matching Guide',
+  text: 'Here is how to match candies! Follow these steps to match candies at once!',
   attachTo: {
     element: '.show-button',
     on: 'bottom'
   },
   buttons: [
     {
-      text: 'Next',
+      text: 'Finish 🎉',
       action: tour.next,
       classes: 'shepherd-button',
     }
@@ -176,7 +214,6 @@ tour.addStep({
       }
     }
   },
-  classes: 'shepherd-header',
 });
 
 type Board = number[];
@@ -201,6 +238,8 @@ function App() {
 
   const dispatch = useAppDispatch();
   const [highlightedCandies, setHighlightedCandies] = useState<number[]>([]);
+  const [lives, setLives] = useState(3); // New state for lives
+
 
   const board = useAppSelector(({candyCrush:{board}}) => board);
   const boardSize = useAppSelector(
@@ -282,6 +321,7 @@ function App() {
     return false;
   };
   const showMove = () => {
+    if (lives > 0) {
     console.log('showMove called');
     const possibleMoves = findPossibleMoves(board.map(Number), boardSize);
     console.log('possibleMoves:', possibleMoves);
@@ -292,11 +332,24 @@ function App() {
       return match;
     });
     console.log('matchingMoves:', matchingMoves);
+    setLives(lives - 1); // Decrement lives when help is used
+    } else {
+      alert('No more lives left!');
+    }
   };
 
   return (
     <div className='flex items-center justify-center h-screen'>
        <h1 className='button dark score-button'>Score: {score}</h1>
+       <div className='lives-container'>
+       <div className="lives-button">
+       <div className="lives livesnew-button">
+        {Array.from({ length: lives }).map((_, index) => (
+          <span key={index} role="img" aria-label="heart">❤️</span>
+        ))}
+      </div>
+      </div>
+      </div>
        {/* <img src='public\part1.png' className="image" alt='new'> Part 1</img> */}
       <Board  className="board" highlightedCandies={highlightedCandies} />
       <button className="button dark start-tour-button" onClick={() => tour.start()}>
